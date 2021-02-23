@@ -97,7 +97,7 @@ async function handleCreateRace() {
 	// TODO - call the async function runCountdown
 		await  runCountdown()
 	// TODO - call the async function startRace
-	console.log("store.race_id - 1:", store.race_id - 1)
+	console.log("store.race_id in run countdown", store.race_id)
 	const startResults = await startRace(store.race_id - 1)
 	if (startResults.error) {
     renderAt('#race', renderServerError(startResults))
@@ -278,12 +278,18 @@ function renderRaceStartView(track, racers) {
 			</section>
 
 			<section id="accelerate">
-				<h2>Directions</h2>
+				<h3>Directions</h3>
 				<p>Click the button as fast as you can to make your racer go faster!</p>
-				<button id="gas-peddle">Click Me To Win!</button>
+				<button id="gas-peddle">
+					<h2>Accelerate!</h2>
+				</button>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+        <div class="footer-text">
+            &copy; UdaciRacer Simulation Game - Gabriela Bozbici 
+        </div>
+    </footer>
 	`
 }
 
@@ -296,7 +302,9 @@ function resultsView(positions) {
 		</header>
 		<main>
 			${raceProgress(positions)}
-			<a href="/race">Start a new race</a>
+		<div class="restart">
+			<a href="/race" class="reStartRace">Start a new race</a>
+		</div>
 		</main>
 	`
 }
@@ -312,7 +320,7 @@ function raceProgress(positions) {
 		return `
 			<tr>
 				<td>
-					<h3>${count++} - ${p.driver_name}</h3>
+					<h3>${count++}. ${p.driver_name}</h3>
 				</td>
 			</tr>
 		`
@@ -320,7 +328,9 @@ function raceProgress(positions) {
 
 	return `
 		<main>
-			<h3>Leaderboard</h3>
+			<div class="board">
+				<h3>Leaderboard</h3>
+			</div>
 			<section id="leaderBoard">
 				${results}
 			</section>
