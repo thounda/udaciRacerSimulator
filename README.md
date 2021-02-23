@@ -1,6 +1,14 @@
-# Welcome to the One and only UdaciRacer Simulation Game
+# UdaciRace description
 
-## Project Introduction
+This is a personal project for the 3rd section of the Intermediate JavaScript Nanodegree Program. 
+This is about Asynchronous Programming with JavaScript and is about but not limited to: concepts, usage, Promises and async/await.
+
+# Installation
+
+After cloning the project you will wznt to `npm install` or `yarn install` .
+
+# Project Introduction
+## Instructions to play
 
 Here is a partially built-out game that races cars—your job is to complete it! Throughout the game logic, you will find _"TODO"_ comments that must be completed in order for the game to work. You are going to use the asynchronous skills you gained in the course to fill in the blanks in this game.
 
@@ -105,3 +113,26 @@ Accelerate a car
 - Returns nothing
 
 To complete the race logic, find all the TODO tags in index.js and read the instructions.
+
+# License 
+MIT License
+
+Copyright (c) 2021 Gabriela Bozbici
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
