@@ -389,7 +389,7 @@ function createRace(player_id, track_id) {
 function getRace(id) {
 	// GET request to `${SERVER}/api/races/${id}`
 	return fetch(`${SERVER}/api/races/${id}`)
-	.then(resp => resp.json)
+	.then(resp => resp.json())
 	.catch(err => ({error: true, message: err.message}))
 }
 
