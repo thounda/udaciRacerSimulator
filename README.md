@@ -1,51 +1,123 @@
-# README Template
+# Welcome to the One and only UdaciRacer Simulation Game
 
-Below is a template provided for use when building your README file for students.
+## Project Introduction
 
-# Project Title
+The 'starter' branch contains the partially built-out game that races cars— the master branch provides the completed code / app build! Throughout the game logic, you will find _"TODO"_ comments to which code written to completed requirements in order for the game to work.
 
-Project description goes here.
+The game mechanics are this: you select a player and track, the game begins and you accelerate your racer by clicking an acceleration button. As you accelerate so do the other players and the leaderboard live-updates as players change position on the track. The final view is a results page displaying the players' rankings.
+
+The game has three main views:
+
+## START THE RACE
+
+---
+
+1. The form to create a race
+   <img width="350" alt="Start UdaciRacer" src="">
+
+### GETTING STARTED
+
+---
+
+2. The race progress view (this includes the live-updating leaderboard and acceleration button)
+   <img width="350" alt="UdaciRacer Get Ready" src="">
+
+### RACE RESULTS
+
+---
+
+3. The race results view
+   <img width="350" alt="UdaciRacer Results" src="">
+
+## Starter Code
+
+You are supplied with the following:
+
+1. An API. The API is provided in the form of a binary held in the bin folder. You never need to open the binary file, as there are no edits you can make to it. Your work will be 100% in the front end.
+
+2. HTML Views. The focus of this course is not UI development or styling practice, so we have already provided you with pieces of UI, all you have to do is call them at the right times.
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+In order to build this game, we need to run two things: the game engine API and the front end.
 
-### Dependencies
+### Start the Server
 
-```
-Examples here
-```
+The game engine has been compiled down to a binary so that you can run it on any system. Because of this, you cannot edit the API in any way, it is just a black box that we interact with via the API endpoints.
 
-### Installation
+To run the server, locate your operating system and run the associated command in your terminal at the root of the project.
 
-Step by step explanation of how to get a dev environment running.
+| Your OS               | Command to start the API                                              |
+| --------------------- | --------------------------------------------------------------------- |
+| Mac                   | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-darwin-amd64`      |
+| Windows               | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-windows-amd64.exe` |
+| Linux (Ubuntu, etc..) | `ORIGIN_ALLOWED=http://localhost:3000 ./bin/server-linux-amd64`       |
 
-List out the steps
+Note that this process will use your terminal tab, so you will have to open a new tab and navigate back to the project root to start the front end.
 
-```
-Give an example here
-```
+#### WINDOWS USERS -- Setting Environment Variables
 
-## Testing
+If you are using a windows machine:
 
-Explain the steps needed to run any automated tests
+1. `cd` into the root of the project containing data.json
+2. Run the following command to add the environment variable:
+   `set DATA_FILE=./data.json`
 
-### Break Down Tests
+If you still run into issues running the API server on your machine, you can run this project in the Udacity classroom.
 
-Explain what each test does and why
+### Start the Frontend
 
-```
-Examples here
-```
+First, run your preference of `npm install && npm start` or `yarn && yarn start` at the root of this project. Then you should be able to access http://localhost:3000.
 
-## Built With
+## Project Requirements
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+This starter code base has directions for you in `src/client/assets/javascript/index.js`. There you will be directed to use certain asynchronous methods to achieve tasks. You will know you're making progress as you can play through more and more of the game.
 
-Include all items used to build project.
+### API Calls
 
-## License
+To complete the project you must first create the calls to the API. These will all be fetch requests, and all information needed to create the request is provided in the instructions. The API calls are all at the bottom of the file: `src/client/assets/javascript/index.js`.
 
-This project is licensed under the MIT License - see the [LICENSE.md]()
+Below are a list of the API endpoints and the shape of the data they return. These are all of the endpoints you need to complete the game. Consult this information often as you complete the project:
+
+[GET] `api/tracks`
+List of all tracks
+
+- id: number (1)
+- name: string ("Track 1")
+- segments: number[]([87,47,29,31,78,25,80,76,60,14....])
+
+[GET] `api/cars`
+List of all cars
+
+- id: number (3)
+- driver_name: string ("Racer 1")
+- top_speed: number (500)
+- acceleration: number (10)
+- handling: number (10)
+
+[GET] `api/races/${id}`
+Information about a single race
+
+- status: RaceStatus ("unstarted" | "in-progress" | "finished")
+- positions object[] ([{ car: object, final_position: number (omitted if empty), speed: number, segment: number}])
+
+[POST] `api/races`
+Create a race
+
+- id: number
+- track: string
+- player_id: number
+- cars: Cars[] (array of cars in the race)
+- results: Cars[] (array of cars in the position they finished, available if the race is finished)
+
+[POST] `api/races/${id}/start`
+Begin a race
+
+- Returns nothing
+
+[POST] `api/races/${id}/accelerate`
+Accelerate a car
+
+- Returns nothing
+
+To complete the race logic, find all the TODO tags in index.js and read the instructions.
