@@ -3,6 +3,8 @@
 This is a personal project for the 3rd section of the Intermediate JavaScript Nanodegree Program.
 This is about Asynchronous Programming with JavaScript and is about but not limited to: concepts, usage, Promises and async/await.
 
+![UdaciRacer Formula 1 Simulator](/src/client/assets/images/racer-image-1.png)
+
 # Installation
 
 After cloning the project you will wznt to `npm install` or `yarn install` .
