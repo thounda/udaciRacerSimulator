@@ -3,13 +3,11 @@
 /* -------------------  MOBILE  --------------------- */
 
 header {
-  background-image: url('https://www.bolton-le-moorscarclub.co.uk/wp-content/uploads/2016/08/Race-cars.jpg');
+  background-image: url("https://niconcepts.com/examples/udaciracer-sim/images/racer-image-.png");
 }
-
 
 /* -------------------  TABLET  --------------------- */
 @media (min-width: 768px) {
-
 }
 
 /* -------------------  DESKTOP  -------------------- */
