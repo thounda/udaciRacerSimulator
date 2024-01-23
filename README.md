@@ -22,13 +22,13 @@ The game mechanics are this: you select a player and track, the game begins and 
 ### The game has three main views:
 
 1. The form to create a race
-   ![UdaciRacer Simulator - Create Race](/src/client/assets/images/racer-image-1.png)
+   ![UdaciRacer Simulator - Create Race](/src/client/assets/images/udaciracer-start-race.png)
 
 2. The race progress view (this includes the live-updating leaderboard and acceleration button)
-   ![UdaciRacer Simulator - Progress](/src/client/assets/images/racer-image-3.png)
+   ![UdaciRacer Simulator - Progress](/src/client/assets/images/udaciracer-simulator-progress.png)
 
 3. The race results view
-   ![UdaciRacer Simulator - Race Results](/src/client/assets/images/racer-image-4.png)
+   ![UdaciRacer Simulator - Race Results](/src/client/assets/images/udaciracer-simulator-results.png)
 
 ## Starter Code
 
@@ -122,6 +122,8 @@ Accelerate a car
 - Returns nothing
 
 To complete the race logic, find all the TODO tags in index.js and read the instructions.
+
+![UdaciRacer Simulator - Race Results](/src/client/assets/images/racer-image-3.png)
 
 # License
 
