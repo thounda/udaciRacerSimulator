@@ -3,7 +3,7 @@
 This is a personal project for the 3rd section of the Intermediate JavaScript Nanodegree Program.
 This is about Asynchronous Programming with JavaScript and is about but not limited to: concepts, usage, Promises and async/await.
 
-![UdaciRacer Formula 1 Simulator](/src/client/assets/images/racer-image-1.png)
+![UdaciRacer Formula 1 Simulator](/src/client/assets/images/udaciRacer-Simulator-project.png)
 
 # Installation
 
@@ -20,10 +20,13 @@ The game mechanics are this: you select a player and track, the game begins and 
 The game has three main views:
 
 1. The form to create a race
+   ![UdaciRacer Simulator - Create Race](/src/client/assets/images/racer-image-1.png)
 
 2. The race progress view (this includes the live-updating leaderboard and acceleration button)
+   ![UdaciRacer Simulator - Progress](/src/client/assets/images/racer-image-3.png)
 
 3. The race results view
+   ![UdaciRacer Simulator - Race Results](/src/client/assets/images/racer-image-4.png)
 
 ## Starter Code
 
