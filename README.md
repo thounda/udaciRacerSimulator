@@ -15,7 +15,7 @@ After cloning the project you will wznt to `npm install` or `yarn install` .
 
 Here is a partially built-out game that races cars—your job is to complete it! Throughout the game logic, you will find _"TODO"_ comments that must be completed in order for the game to work. You are going to use the asynchronous skills you gained in the course to fill in the blanks in this game.
 
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=Hc79sDi3f0U "Now in Android: 55")
+[<img src="/src/client/assets/images/UdaciRacer Simulator Video Thumbnail.png" width="50%">](https://www.youtube.com/watch?v=EHERZwIRxMY "Udacity Project Udaciracer Simulator")
 
 The game mechanics are this: you select a player and track, the game begins and you accelerate your racer by clicking an acceleration button. As you accelerate so do the other players and the leaderboard live-updates as players change position on the track. The final view is a results page displaying the players' rankings.
 
